@@ -10,7 +10,7 @@ public class EmailSampleTest
 			Scanner input = new Scanner(System.in);
 			System.out.print("Enter email address :");
 			String mailAddress = input.nextLine();
-			String regex="^[a-z]{3}[-.+]*[0-9]*[@]{1}[a-z]*[0-9]*[.]{1}[a-z]{1,3}[.]*[a-z]*[,]*";
+			String regex = "^[A-Za-z0-9]+([-\\\\.\\\\+\\\\_][0-9A-Za-z]+)*[@][A-Za-z0-9]+.[a-zA-Z]{2,4}([\\\\.\\\\,][a-z]{2,3})?$";
 			Pattern p = Pattern.compile(regex);
 
 			Matcher m = p.matcher(mailAddress);
